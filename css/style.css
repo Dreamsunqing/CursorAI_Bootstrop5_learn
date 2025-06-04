@@ -1,0 +1,320 @@
+/* 全局样式 */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* 导航栏样式 */
+#nav {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* 横幅区域样式 */
+#banner {
+    background-color: var(--light-color);
+    padding: 6rem 0;
+}
+
+#banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#banner .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* 搜索区域样式 */
+#search {
+    background-color: var(--light-color);
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* 课程卡片样式 */
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 课程大纲样式 */
+#outlines .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 学习路径样式 */
+#path {
+    position: relative;
+}
+
+/* 教学团队样式 */
+#group .card {
+    text-align: center;
+}
+
+#group .card-img-top {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+/* 问答模块样式 */
+#question .accordion-button:not(.collapsed) {
+    background-color: var(--info-color);
+    color: white;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--dark-color);
+}
+
+footer h5 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--light-color);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #banner {
+        padding: 4rem 0;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* 动画效果 */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 时间线样式 */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-panel {
+    position: relative;
+    width: calc(50% - 30px);
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-panel {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-panel {
+    margin-right: auto;
+}
+
+.timeline-heading {
+    margin-bottom: 15px;
+}
+
+.timeline-title {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.timeline-body ul li {
+    margin-bottom: 10px;
+}
+
+.timeline-body ul li i {
+    margin-right: 10px;
+}
+
+/* 响应式时间线 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-badge {
+        left: 30px;
+    }
+
+    .timeline-panel {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+}
+
+/* 优化响应式布局 */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .timeline-panel {
+        padding: 15px;
+    }
+}
+
+/* 添加动画效果 */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 优化卡片悬停效果 */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 优化按钮效果 */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.btn:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+/* 优化移动端显示 */
+@media (max-width: 576px) {
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+} 
