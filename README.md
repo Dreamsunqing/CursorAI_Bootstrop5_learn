@@ -65,21 +65,21 @@
 
 1. 克隆仓库
 ```bash
-git clone [仓库地址]
+git clone https://github.com/Dreamsunqing/CursorAI_Bootstrop5_learn.git
 ```
 
-2. 安装依赖
+2. 安装依赖 （已经包含图片，无需生成）
 ```bash
 # 安装 Python 依赖（用于图片生成）
 pip install -r requirements.txt
 ```
 
-3. 生成图片资源
+3. 生成图片资源 （已经包含图片，无需生成）
 ```bash
 python generate_images.py
 ```
 
-4. 启动本地服务器
+4. 启动本地服务器 需要启动
 ```bash
 # 使用 Python 的简单 HTTP 服务器
 python -m http.server 8000
@@ -122,7 +122,7 @@ python -m http.server 8000
 2. **测试结果汇总将显示在页面右下角的提示框中**
 3. 详细的通过/失败信息仍可在浏览器开发者工具的控制台查看
 
-## 贡献指南
+## 贡献指南 （不会有人改这个吧，不会吧）
 
 1. Fork 项目
 2. 创建特性分支
@@ -142,5 +142,3 @@ python -m http.server 8000
 ## 致谢
 
 - Bootstrap 团队
-- 所有贡献者
-- 开源社区 
